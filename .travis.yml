@@ -5,7 +5,7 @@ services:
 
 install:
   - docker build -t go-tour .
-  - docker run -d -p 80:3999 --name go-tour go-tour
+  - docker run -d -p 80:3999 --name gotour gotour
 
 script:
-  - docker ps | grep -q go-tour
+  - docker ps | grep -q gotour
