@@ -1,0 +1,11 @@
+sudo: required
+
+services:
+  - docker
+
+install:
+  - docker build -t go-tour .
+  - docker run -d -p 80:3999 --name go-tour go-tour
+
+script:
+  - docker ps | grep -q go-tour
