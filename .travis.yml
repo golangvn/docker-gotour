@@ -4,7 +4,7 @@ services:
   - docker
 
 install:
-  - docker build -t go-tour .
+  - docker build -t gotour .
   - docker run -d -p 80:3999 --name gotour gotour
 
 script:
