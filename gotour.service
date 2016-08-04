@@ -1,0 +1,13 @@
+[Unit]
+Description=Go tour service
+After=etcd.service
+After=docker.service
+
+[Service]
+TimeoutStartSec=0
+ExecStart=/opt/bin/docker-compose up
+ExecStop=/opt/bin/docker-compose down
+WorkingDirectory=/home/core/docker-gotour
+
+[Install]
+WantedBy=multi-user.target
