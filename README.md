@@ -15,6 +15,16 @@ sudo systemctl start gotour
 ```
 sudo systemctl stop gotour
 ```
+# How to use autodeploy
+- Build that script
+```
+go build autodeploy.go
+```
+- Copy bin file to server and run it
+- Add webhook with endpoint /update-docker-go-tour
 
 # TODO
-- [ ] Auto restart gotour service when tour translate update
+- [x] Auto restart gotour service when tour translate update
+- [ ] Prevent multiple request to restart service with autodeploy.go script
+- [ ] Support webhook screet
+- [ ] Only update when pust to translate-vi branch
