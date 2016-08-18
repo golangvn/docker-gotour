@@ -9,6 +9,7 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
   gotour:
     image: sonbui00/docker-gotour
+    #build: .
     container_name: gotour
     environment:
       - VIRTUAL_HOST=tour.golangvn.net

@@ -15,8 +15,7 @@ RUN mkdir -p /home/gophers/go/src/golang.org/x/ \
     && git checkout translate-vi \
     && go get golang.org/x/tour/gotour
 
-RUN sed -i 's/Handshake: handshake,/Handshake: nil,/g' /home/gophers/go/src/golang.org/x/tools/playground/socket/socket.go
-RUN sed -i -e "s/127.0.0.1:3999/0.0.0.0:3999/" /home/gophers/go/src/golang.org/x/tour/gotour/local.go
+COPY local.go /home/gophers/go/src/golang.org/x/tour/gotour
 RUN go install golang.org/x/tour/gotour
 RUN chown -R gophers /home/gophers/go/src/golang.org/x/tour
 
