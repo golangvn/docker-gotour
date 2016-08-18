@@ -12,5 +12,5 @@ services:
     #build: .
     container_name: gotour
     environment:
-      - VIRTUAL_HOST=tour.golangvn.net
+      - VIRTUAL_HOST=tour.golangvn.org
       - VIRTUAL_PORT=3999
